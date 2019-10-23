@@ -9,14 +9,27 @@ public class Quiz
     private List<Question> questions;
     private int score;
 
+    public Quiz(List<Question> questions)
+    {
+        this.questions = questions;
+        currentQuestion = 0;
+        score = 0;
+    }
+
 
     public void checkAnswer(boolean answer)
     {
+        if(answer == questions.get(currentQuestion).getAnswer())
+        {
+            score++;
+
+        }
+
 
     }
     public boolean hasMoreQuestion()
     {
-        if(questions.size() == currentQuestion + 1)
+        if(questions.size() <= currentQuestion + 1)
         {
             return false;
         }
@@ -47,7 +60,8 @@ public class Quiz
         return currentQuestion;
     }
 
-    public List<Question> getQuestions() {
+    public List<Question> getQuestions()
+    {
         return questions;
     }
 
