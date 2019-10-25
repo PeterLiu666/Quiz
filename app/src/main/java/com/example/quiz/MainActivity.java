@@ -2,6 +2,7 @@ package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity
     private Button falseButton;
     private boolean waitAnswer;
     private Quiz quiz;
+    public static final String EXTRA_SCORE = "score";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,8 +56,14 @@ public class MainActivity extends AppCompatActivity
 
 
 
+
         quiz = new Quiz(questions);
         questionText.setText(quiz.getQuestions().get(quiz.getCurrentQuestion()).getQuestion());
+
+
+
+
+        setListeners();
 
 
     }
@@ -67,15 +76,20 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 quiz.checkAnswer(true);
-                quiz.nextQuestion();
                 if(quiz.hasMoreQuestion())
                 {
                     questionText.setText(quiz.nextQuestion().getQuestion());
 
                 }
+                else
+                {
+                    int score = quiz.getScore();
+                    Intent targetIntent = new Intent(MainActivity.this, ScoreActivity.class);
+                    targetIntent.putExtra(EXTRA_SCORE, score);
+                    startActivity(targetIntent);
+                    finish();
 
-
-
+                }
 
             }
         });
@@ -86,17 +100,23 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 quiz.checkAnswer(false);
-
                 if(quiz.hasMoreQuestion())
                 {
                     questionText.setText(quiz.nextQuestion().getQuestion());
                 }
+                else
+                {
+                    int score = quiz.getScore();
+                    Intent targetIntent = new Intent(MainActivity.this, ScoreActivity.class);
+                    targetIntent.putExtra(EXTRA_SCORE, score);
+                    startActivity(targetIntent);
+                    finish();
 
-
-
+                }
 
             }
         });
+
     }
 
 

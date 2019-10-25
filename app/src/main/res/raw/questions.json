@@ -1,24 +1,15 @@
 [
 
-  {"question" :  "SPHS is poor", "Answer" :  "True"},
-  {
-    "question":  "AP Computer Science is the best class ", "Answer" :  "True"},
-  {
-    "question":  "Math is fun ", "Answer" :  "False"},
-  {
-    "question":  "Mr.Papadakis is a living meme ", "Answer" : "True"},
-  {
-    "question":  "An apple is an orange ", "Answer" :  "False"},
-  {
-    "question":  "JAVA is superior to all other codes ", "Answer" :  "True"},
-  {
-    "question":  "Issac's Asian girlfriend ditched him over the summer ", "Answer" :  "True"},
-  {
-    "question":  "Bulgaria is a nice country", "Answer" :  "False"},
-  {
-    "question":  "Issac drinks ranch sauce ", "Answer" :  "True"},
-  {
-    "question":  "Mr.Shorr is the GOAT ", "Answer" :  "True"}
+  { "question" :  "SPHS is poor", "answer":  "True"},
+  { "question":  "AP Computer Science is the best class ", "answer":  "True"},
+  { "question":  "Math is fun ", "answer":  "False"},
+  { "question":  "Mr.Papadakis is a living meme ", "answer": "True"},
+  { "question":  "An apple is an orange ", "answer":  "False"},
+  { "question":  "JAVA is superior to all other codes ", "answer":  "True"},
+  { "question":  "Issac's Asian girlfriend ditched him over the summer ", "answer":  "True"},
+  { "question":  "Bulgaria is a nice country", "answer":  "False"},
+  { "question":  "Issac drinks ranch sauce ", "answer":  "True"},
+  { "question":  "Mr.Shorr is the GOAT ", "answer":  "True"}
 
 
 ]

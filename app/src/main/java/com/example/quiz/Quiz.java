@@ -29,7 +29,7 @@ public class Quiz
     }
     public boolean hasMoreQuestion()
     {
-        if(questions.size() <= currentQuestion + 1)
+        if(currentQuestion + 1 == questions.size())
         {
             return false;
         }
@@ -39,8 +39,11 @@ public class Quiz
     }
     public Question nextQuestion()
     {
-        currentQuestion++;
-        return questions.get(currentQuestion + 1);
+        currentQuestion = currentQuestion + 1;
+
+
+
+        return questions.get(currentQuestion);
 
     }
 
