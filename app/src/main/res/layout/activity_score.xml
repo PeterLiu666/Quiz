@@ -10,12 +10,13 @@
         android:id="@+id/textView_score_score"
         android:layout_width="129dp"
         android:layout_height="62dp"
-        android:text="TextView"
+        android:text= "String"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintVertical_bias="0.469"
+        tools:text="Score" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
