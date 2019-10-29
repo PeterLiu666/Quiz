@@ -3,4 +3,5 @@
     <string name="app_name">Quiz</string>
     <string name="true_name">Verum</string>
     <string name="false_name">Falsus</string>
+    <string name="restart">" Ludus Sileo"</string>
 </resources>
