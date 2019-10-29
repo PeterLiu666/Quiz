@@ -24,7 +24,7 @@ public class ScoreActivity extends AppCompatActivity
 
 
         //
-        scoreText.setText("Score: " + score + "\nThanks for Playing");
+        scoreText.setText(score);
     }
 
     public void wireWidgets()
