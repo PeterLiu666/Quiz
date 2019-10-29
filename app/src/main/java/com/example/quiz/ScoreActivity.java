@@ -24,7 +24,7 @@ public class ScoreActivity extends AppCompatActivity
 
 
         //
-        scoreText.setText(score);
+        scoreText.setText(score + "/10");
     }
 
     public void wireWidgets()
