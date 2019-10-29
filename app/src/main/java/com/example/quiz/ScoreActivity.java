@@ -39,6 +39,7 @@ public class ScoreActivity extends AppCompatActivity
             {
                 Intent targetIntent = new Intent(ScoreActivity.this, MainActivity.class);
                 startActivity(targetIntent);
+                finish();
 
             }
         });
