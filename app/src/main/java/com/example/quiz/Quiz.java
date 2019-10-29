@@ -17,13 +17,15 @@ public class Quiz
     }
 
 
-    public void checkAnswer(boolean answer)
+    public boolean checkAnswer(boolean answer)
     {
         if(answer == questions.get(currentQuestion).getAnswer())
         {
             score++;
+            return true;
 
         }
+        return false;
 
 
     }

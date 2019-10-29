@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity
 
 
         quiz = new Quiz(questions);
-        questionText.setText(quiz.getQuestions().get(quiz.getCurrentQuestion()).getQuestion());
+        questionText.setText((quiz.getCurrentQuestion() + 1) + ". " + quiz.getQuestions().get(quiz.getCurrentQuestion()).getQuestion());
 
 
 
@@ -75,10 +75,18 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                quiz.checkAnswer(true);
+                if(quiz.checkAnswer(true))
+                {
+                    Toast.makeText(MainActivity.this, "✓", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "✗", Toast.LENGTH_LONG).show();
+
+                }
                 if(quiz.hasMoreQuestion())
                 {
-                    questionText.setText(quiz.nextQuestion().getQuestion());
+                    questionText.setText((quiz.getCurrentQuestion() + 2) + ". " + quiz.nextQuestion().getQuestion());
 
                 }
                 else
@@ -99,10 +107,19 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                quiz.checkAnswer(false);
+                if(quiz.checkAnswer(false))
+                {
+                    Toast.makeText(MainActivity.this, "✓", Toast.LENGTH_LONG).show();
+
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "✗", Toast.LENGTH_LONG).show();
+
+                }
                 if(quiz.hasMoreQuestion())
                 {
-                    questionText.setText(quiz.nextQuestion().getQuestion());
+                    questionText.setText((quiz.getCurrentQuestion() + 2) + ". " + quiz.nextQuestion().getQuestion());
                 }
                 else
                 {
